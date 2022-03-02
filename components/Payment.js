@@ -40,7 +40,7 @@ const Payment = () => {
 
           method: "post",
           // Stripe expects the total in a currencies subunits
-          url: `http://localhost:5001/challenge-7313f/us-central1/api/payments/create?total=${getBasketTotal(basket) * 100}`,
+          url: `https://stripeebackend.herokuapp.com/payments/create?total=${getBasketTotal(basket) * 100}`,
     headers:{"Access-Control-Allow-Origin":"*"},
         });
         setClientSecret(response.data.clientSecret);
