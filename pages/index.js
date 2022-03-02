@@ -86,7 +86,7 @@ export default function Home({ results }) {
       </Head>
 
       <Header />
-      <Nav count={5} />
+      <Nav count={results.count} />
       <Results results={results.products} />
     </div>
   );
