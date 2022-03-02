@@ -73,7 +73,7 @@ function Signup() {
             {
               method:'post',
               headers:{"Access-Control-Allow-Origin":"*"},
-          url:'http://localhost:8080/api/custumer',
+          url:'https://jeeback.herokuapp.com/api/custumer',
           data:{
             id:user.uid,
             fullname:fullname,
