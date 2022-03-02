@@ -85,7 +85,7 @@ const Payment = () => {
     axios({
       method:'post',
       headers:{"Access-Control-Allow-Origin":"*"},
-      url:'http://localhost:8080/api/orderitem',
+      url:'https://jeeback.herokuapp.com/api/orderitem',
       data:{
         id:uid2,
         line:uid2
