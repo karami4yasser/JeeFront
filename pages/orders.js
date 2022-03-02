@@ -34,7 +34,7 @@ function orders() {
           const response = await axios(
             {
               method:'get',
-          url:`http://localhost:8080/api/custumer/${authUser.uid}`,
+          url:`https://jeeback.herokuapp.com/api/custumer/${authUser.uid}`,
         
 
             }
