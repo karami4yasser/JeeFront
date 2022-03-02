@@ -34,10 +34,10 @@ function Header() {
 
   return (
     <header
-      className="flex flex-col xl:flex-row my-5 justify-between items-center h-auto  "
+      className="flex flex-col xl:flex-row m-5 justify-between items-center h-auto  "
     >
       <div
-        className="flex flex-grow justify-evenly max-w-2xl"
+        className="flex flex-grow px-2 justify-evenly max-w-2xl"
       >
         <HeaderItem
           title="HOME"
