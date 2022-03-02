@@ -62,7 +62,7 @@ const Payment = () => {
       const back=  await axios({
         method:'post',
         headers:{"Access-Control-Allow-Origin":"*"},
-        url:'http://localhost:8080/api/order',
+        url:'https://jeeback.herokuapp.com/api/order',
         data:{
               id:uid,
               status:"CLOSED",
