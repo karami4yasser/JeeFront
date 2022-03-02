@@ -86,7 +86,7 @@ function Signup() {
             }
           );
           router.push("/");};
-          save();
+          save().catch((error) => {console.log('')});;
          
           
         }
