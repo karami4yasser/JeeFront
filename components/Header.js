@@ -37,7 +37,7 @@ function Header() {
       className="flex flex-col xl:flex-row m-5 justify-between items-center h-auto  "
     >
       <div
-        className="flex flex-grow px-2 justify-evenly max-w-2xl"
+        className="flex flex-grow px-2 "
       >
         <HeaderItem
           title="HOME"
