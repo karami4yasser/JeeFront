@@ -74,7 +74,7 @@ const Payment = () => {
             
              axios({
               method:'put',
-              url:`http://localhost:8080/api/order/${uid}/custumer/${user.uid}`
+              url:`https://jeeback.herokuapp.com/api/order/${uid}/custumer/${user.uid}`
             })
   
   
@@ -97,7 +97,7 @@ const Payment = () => {
   
         axios({
         method:'put',
-        url:`http://localhost:8080/api/order/${uid}/orderitem/${uid2}/product/${item.id}/1`
+        url:`https://jeeback.herokuapp.com/api/order/${uid}/orderitem/${uid2}/product/${item.id}/1`
       })
       
     })
