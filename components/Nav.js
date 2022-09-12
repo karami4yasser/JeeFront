@@ -1,7 +1,7 @@
 import requests from "../utils/requests";
 import { useRouter } from "next/router";
 import { Pagination } from '@mui/material';
-import { useState } from "react";
+import React, { useState, useEffect } from 'react';
 
 function Nav({count}) {
   const router = useRouter();
@@ -15,6 +15,11 @@ function Nav({count}) {
     router.push(`/?category=${key}&page=${page}`)
 
   };
+  useEffect(() => {
+    //Runs only on the first render
+    console.log(page)
+  }, [page]);
+  
   return (
    
     <nav className="relative">
@@ -24,7 +29,7 @@ function Nav({count}) {
       space-x-10 sm:space-x-20 overflow-x-scroll 
       scrollbar-hide"
       >
-        {Object.entries(requests).map(([key, { title, url }]) => (
+        {/* {Object.entries(requests).map(([key, { title, url }]) => (
           <h2
             key={key}
             onClick={() =>
@@ -42,7 +47,7 @@ function Nav({count}) {
           >
             {title}
           </h2>
-        ))}
+        ))} */}
       </div>
       <div
         className="absolute top-0 right-0 bg-gradient-to-l 
