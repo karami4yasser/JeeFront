@@ -7,13 +7,12 @@ import { getFirestore } from "firebase/firestore";
 import "firebase/auth";
 import "firebase/database";
 const firebaseConfig = {
-  apiKey: "AIzaSyDwpTgHXSRUd3BjypUl2BL8-nSLJ-GCZeA",
-  authDomain: "challenge-7313f.firebaseapp.com",
-  projectId: "challenge-7313f",
-  storageBucket: "challenge-7313f.appspot.com",
-  messagingSenderId: "994543207441",
-  appId: "1:994543207441:web:eeb30a31a50969a70dddb0",
-  measurementId: "G-3CLCQM9P70",
+  apiKey: "AIzaSyBAwAefx4Z0ydU9sK2A63oEiOQvD1NCcO0",
+  authDomain: "stage1a-85133.firebaseapp.com",
+  projectId: "stage1a-85133",
+  storageBucket: "stage1a-85133.appspot.com",
+  messagingSenderId: "598866263276",
+  appId: "1:598866263276:web:404e1ecd8823dcc122f9c9"
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
