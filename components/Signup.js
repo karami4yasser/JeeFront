@@ -22,6 +22,7 @@ function Signup() {
   const [type, setType] = useState("pariculier");
   const [ischecked1, setIschecked1] = useState(true);
   const [ischecked2, setIschecked2] = useState(false);
+  const [loading,setLoading] = useState(false);
   //const [password, setPassword] = useState("");
  
 
@@ -44,16 +45,19 @@ function Signup() {
 
   const signIn = (e) => {
     e.preventDefault();
+    setLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
+        setLoading(false);
         if (auth) {
           router.push("/");
         }
         // ...
       })
       .catch((error) => {
+        setLoading(false);
         const errorCode = error.code;
         const errorMessage = error.message;
         alert(errorMessage);
@@ -61,6 +65,7 @@ function Signup() {
   };
   const register = (e) => {
     e.preventDefault();
+    setLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         // Signed in
@@ -85,6 +90,7 @@ function Signup() {
 
             }
           );
+          setLoading(false);
           router.push("/");};
           save().catch((error) => {console.log('')});;
          
@@ -95,6 +101,7 @@ function Signup() {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
+        setLoading(false);
         alert(errorMessage);
         // ..
       });
