@@ -1,7 +1,7 @@
 import requests from "../utils/requests";
 import { useRouter } from "next/router";
 import { Pagination } from '@mui/material';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Nav({count}) {
   const router = useRouter();
@@ -15,6 +15,10 @@ function Nav({count}) {
     router.push(`/?category=${key}&page=${page}`)
 
   };
+  useEffect(() => {
+    //Runs only on the first render
+    console.log(page)
+  }, [page]);
   return (
    
     <nav className="relative">
